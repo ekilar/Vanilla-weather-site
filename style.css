@@ -1,0 +1,90 @@
+.container {
+  background: rgba(18, 179, 201, 0.856);
+  max-width: 800px;
+  padding-top: 20px;
+  margin: 50px auto;
+  border-radius: 10px;
+  border: solid #90abce;
+}
+.temp-now {
+  size: 50px;
+}
+.search-form,
+.search-button {
+  border-radius: 15px;
+  border-width: 1px;
+}
+.search-button {
+  background: green;
+  border: green;
+  color: white;
+}
+.search-button:hover {
+  background: rgb(2, 54, 2);
+  cursor: pointer;
+}
+h1,
+ul,
+.temp-now,
+.current-location,
+.temp-illustration,
+.weekly-temp {
+  color: rgb(255, 255, 255);
+}
+.current-date,
+.current-city {
+  color: yellow;
+}
+h1,
+.temp-now {
+  font-size: 40px;
+}
+.am-pm {
+  font-size: 18px;
+}
+.current-date {
+  font-size: 16px;
+  line-height: 1px;
+}
+.current-location {
+  font-size: 30px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-right: 10px;
+}
+.current-city {
+  font-size: 16px;
+  line-height: 1px;
+}
+.temp-illustration {
+  font-size: 80px;
+}
+.temp-illustration,
+.temp-now,
+.temp-units {
+  line-height: 200px;
+}
+#weather-description {
+  font-size: 20px;
+  line-height: 50px;
+  text-transform: capitalize;
+}
+.temp-now {
+  padding: 80px 2px 80px 2px;
+}
+.temp-units {
+  color: rgb(245 245 137);
+  font-size: 15px;
+  padding-right: 0px;
+  position: relative;
+  top: -20px;
+}
+.temp-units:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.weekly-temp {
+  background: rgba(4, 100, 112, 0.856);
+  padding: 20px;
+}
