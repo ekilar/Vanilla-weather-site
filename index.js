@@ -41,7 +41,6 @@ let year = now.getFullYear();
 h2.innerHTML = `${day}, ${date} ${month}, ${year}`;
 
 function displayTemperature(response) {
-  console.log(response.data.main.humidity);
   let tempNow = document.querySelector(".temp-now");
   tempNow.innerHTML = Math.round(response.data.main.temp);
   let currentCountry = document.querySelector(".current-location");
@@ -61,7 +60,20 @@ function displayTemperature(response) {
   );
 }
 
-let apiKey = "c0782bbec2a05e6907ffc16c52c06706";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Yaounde&appid=${apiKey}&units=metric`;
+function search(city) {
+  let apiKey = "c0782bbec2a05e6907ffc16c52c06706";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function searchSubmit(event) {
+  event.preventDefault();
+  let cityInput = document.querySelector("#search-input");
+  search(cityInput.value);
+}
+
+search("New York");
+
+let form = document.querySelector(".search-form");
+form.addEventListener("submit", searchSubmit);
