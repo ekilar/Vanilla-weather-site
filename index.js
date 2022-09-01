@@ -54,9 +54,14 @@ function displayTemperature(response) {
   humidity.innerHTML = response.data.main.humidity;
   let windSpeed = document.querySelector("#wind");
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  let weatherIcon = document.querySelector("#current-icon");
+  weatherIcon.setAttribute(
+    "src",
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "c0782bbec2a05e6907ffc16c52c06706";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=New York&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Yaounde&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);

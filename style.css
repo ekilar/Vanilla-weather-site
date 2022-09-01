@@ -65,7 +65,7 @@ h1,
   line-height: 200px;
 }
 #weather-description {
-  font-size: 20px;
+  font-size: 15px;
   line-height: 50px;
   text-transform: capitalize;
 }
