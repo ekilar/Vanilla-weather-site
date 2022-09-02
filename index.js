@@ -42,18 +42,21 @@ h2.innerHTML = `${day}, ${date} ${month}, ${year}`;
 
 function displayTemperature(response) {
   let tempNow = document.querySelector(".temp-now");
-  tempNow.innerHTML = Math.round(response.data.main.temp);
   let currentCountry = document.querySelector(".current-location");
-  currentCountry.innerHTML = response.data.sys.country;
   let currentCity = document.querySelector(".current-city");
-  currentCity.innerHTML = response.data.name;
   let skyDescription = document.querySelector("#weather-description");
-  skyDescription.innerHTML = response.data.weather[0].description;
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = response.data.main.humidity;
   let windSpeed = document.querySelector("#wind");
-  windSpeed.innerHTML = Math.round(response.data.wind.speed);
   let weatherIcon = document.querySelector("#current-icon");
+
+  celsiusTemp = response.data.main.temp;
+
+  tempNow.innerHTML = Math.round(response.data.main.temp);
+  currentCountry.innerHTML = response.data.sys.country;
+  currentCity.innerHTML = response.data.name;
+  skyDescription.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
   weatherIcon.setAttribute(
     "src",
     `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -72,8 +75,32 @@ function searchSubmit(event) {
   let cityInput = document.querySelector("#search-input");
   search(cityInput.value);
 }
+function displayInFahrenheit(event) {
+  event.preventDefault();
+  let tempElement = document.querySelector(".temp-now");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  tempElement.innerHTML = Math.round(fahrenheitTemp);
+}
 
-search("New York");
+function displayInCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let tempElement = document.querySelector(".temp-now");
+  tempElement.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null;
 
 let form = document.querySelector(".search-form");
 form.addEventListener("submit", searchSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayInFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayInCelsius);
+
+search("New York");
