@@ -40,6 +40,29 @@ let date = now.getDate();
 let year = now.getFullYear();
 h2.innerHTML = `${day}, ${date} ${month}, ${year}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sun", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+          <div class="col-2 mon">
+            <div class="weather-forcast-day">${day}</div>
+            <div>☀️</div>
+            <div class="weather-forcast-temperatures">
+              <span class="weather-forcast-temperature-max">26°</span>
+              <span class="weather-forcast-temperature-min">20°</span>
+            </div>
+          </div>     
+        `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let tempNow = document.querySelector(".temp-now");
   let currentCountry = document.querySelector(".current-location");
@@ -104,3 +127,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayInCelsius);
 
 search("New York");
+displayForecast();
