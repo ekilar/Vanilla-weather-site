@@ -93,4 +93,15 @@ h1,
 .weekly-temp {
   background: rgba(4, 100, 112, 0.856);
   padding: 20px;
+  text-align: center;
+}
+.weather-forcast-day {
+  opacity: 0.7;
+  font-size: 15px;
+}
+.weather-forcast-temperatures {
+  font-size: 13px;
+}
+.weather-forcast-temperature-min {
+  opacity: 0.5;
 }
