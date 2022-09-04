@@ -19,6 +19,7 @@ body {
 .search-button {
   border-radius: 15px;
   border-width: 1px;
+  margin-bottom: 2px;
 }
 .search-button {
   background: rgba(8, 8, 8, 0.1);
@@ -35,7 +36,8 @@ ul,
 .current-location,
 .temp-illustration,
 .weekly-temp,
-.atm-conditions {
+.atm-conditions,
+.temp-units .active {
   color: rgb(255, 255, 255);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -83,7 +85,6 @@ h1,
 }
 .temp-now {
   font-weight: 500;
-  margin-bottom: -2px;
 }
 .atm-conditions {
   line-height: 10px;
@@ -104,9 +105,7 @@ h1,
   text-decoration: none;
   cursor: default;
 }
-.temp-units .active {
-  color: rgb(252, 249, 249);
-}
+
 .temp-units .active:hover {
   color: yellow;
 }
@@ -117,9 +116,7 @@ li {
   font-weight: 400;
   line-height: 10px;
 }
-#wind {
-  line-height: 10px;
-}
+
 .weekly-temp {
   padding: 5px;
   text-align: center;
@@ -128,9 +125,8 @@ li {
 #forecast {
   background: rgba(8, 8, 8, 0.1);
   border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
   margin-bottom: 10px;
-
   position: relative;
 }
 .weather-forcast-day {
