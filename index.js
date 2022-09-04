@@ -151,4 +151,4 @@ fahrenheitLink.addEventListener("click", displayInFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayInCelsius);
 
-search("New York");
+search("Yaounde");
