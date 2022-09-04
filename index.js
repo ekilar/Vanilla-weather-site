@@ -10,35 +10,27 @@ if (minutes < 10) {
 }
 let h1 = document.querySelector("h1");
 h1.innerHTML = `${hours}:${minutes}`;
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 let day = days[now.getDay()];
 let months = [
-  "January",
-  "February",
-  "March",
-  "April",
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
   "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sept",
+  "Oct",
+  "Nov",
+  "Dec",
 ];
 
 let month = months[now.getMonth()];
 let date = now.getDate();
 let year = now.getFullYear();
-h2.innerHTML = `${day}, ${date} ${month}, ${year}`;
+h2.innerHTML = `${day}, ${month} ${date}, ${year}`;
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);

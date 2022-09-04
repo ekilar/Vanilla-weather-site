@@ -5,10 +5,10 @@ body {
 .container {
   background-image: url(images/background-image.jpg);
   background-size: cover;
-  max-width: 600px;
-  max-height: 500px;
+  max-width: 500px;
+  max-height: 400px;
   padding-top: 20px;
-  margin: 50px auto;
+  margin: 30px auto;
   border-radius: 10px;
   border: solid #90abce;
   border-width: 1px;
@@ -34,7 +34,8 @@ ul,
 .temp-now,
 .current-location,
 .temp-illustration,
-.weekly-temp {
+.weekly-temp,
+.atm-conditions {
   color: rgb(255, 255, 255);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -45,78 +46,82 @@ ul,
 }
 h1,
 .temp-now {
-  font-size: 50px;
+  font-size: 40px;
 }
 
-.current-date {
-  font-size: 16px;
+.current-date,
+.current-city {
+  font-size: 13px;
   line-height: 1px;
 }
 .current-location {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bolder;
   margin-bottom: 0;
   padding-right: 10px;
 }
-.current-city {
-  font-size: 16px;
-  line-height: 1px;
-}
+
 .temp-illustration {
-  width: 150px;
-  line-height: 100px;
-  padding-left: 195px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .temp-now,
-.temp-units {
-  line-height: 150px;
+.temp-units,
+.atm-conditions {
+  line-height: 10px;
+}
+#wind {
+  line-height: 2px;
 }
 #weather-description {
-  font-size: 14px;
-  line-height: 15px;
+  font-size: 12px;
+  line-height: 13px;
   font-weight: 400;
   text-transform: capitalize;
   color: rgb(248, 239, 112);
   font-style: italic;
 }
 .temp-now {
-  padding: 80px 2px 20px 120px;
-  margin-bottom: 10px;
+  font-weight: 500;
+  margin-bottom: -2px;
+}
+.atm-conditions {
+  line-height: 10px;
+  margin-top: 30px;
 }
 .temp-units {
-  font-size: 13px;
-  padding-right: 5px;
+  font-size: 11px;
+  font-weight: bolder;
+  padding-right: 0px;
   position: relative;
   top: -20px;
-  color: rgb(10, 10, 10);
 }
 #fahrenheit-link,
 #celsius-link,
 .temp-units .active,
-.temp-units .active:hover,
+.active:hover,
 .github-link {
   text-decoration: none;
   cursor: default;
 }
 .temp-units .active {
-  color: black;
+  color: rgb(252, 249, 249);
 }
 .temp-units .active:hover {
   color: yellow;
 }
-ul {
-  margin-top: 5px;
-}
+
 li {
   list-style-type: none;
-  color: rgb(248, 239, 112);
-  font-size: 13px;
-  font-weight: bolder;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 10px;
+}
+#wind {
+  line-height: 10px;
 }
 .weekly-temp {
-  padding: 20px;
+  padding: 5px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -130,7 +135,7 @@ li {
 }
 .weather-forcast-day {
   opacity: 0.7;
-  font-size: 15px;
+  font-size: 13px;
 }
 .weather-forcast-temperatures {
   font-size: 13px;
