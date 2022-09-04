@@ -123,6 +123,7 @@ li {
   background: rgba(8, 8, 8, 0.1);
   border-radius: 10px;
   margin-bottom: 10px;
+  position: relative;
 }
 .weather-forcast-day {
   opacity: 0.7;
@@ -135,7 +136,7 @@ li {
   opacity: 0.5;
 }
 .credits {
-  padding: 0px 350px;
+  text-align: center;
   position: relative;
   line-height: 2px;
   font-family: monospace;
