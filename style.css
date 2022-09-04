@@ -1,26 +1,32 @@
+body {
+  background: #cfaabd;
+}
+
 .container {
-  background: rgba(18, 179, 201, 0.856);
-  max-width: 800px;
+  background-image: url(images/background-image.jpg);
+  background-size: cover;
+  max-width: 700px;
+  max-height: 600px;
   padding-top: 20px;
   margin: 50px auto;
   border-radius: 10px;
   border: solid #90abce;
+  border-width: 1px;
+  margin-bottom: 10px;
 }
-.temp-now {
-  size: 50px;
-}
+
 .search-form,
 .search-button {
   border-radius: 15px;
   border-width: 1px;
 }
 .search-button {
-  background: green;
-  border: green;
+  background: rgba(8, 8, 8, 0.1);
+  border: rgb(0, 0, 0);
   color: white;
 }
 .search-button:hover {
-  background: rgb(2, 54, 2);
+  background: rgb(194, 106, 154);
   cursor: pointer;
 }
 h1,
@@ -30,25 +36,25 @@ ul,
 .temp-illustration,
 .weekly-temp {
   color: rgb(255, 255, 255);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .current-date,
 .current-city {
   color: yellow;
+  font-style: italic;
 }
 h1,
 .temp-now {
-  font-size: 40px;
+  font-size: 50px;
 }
-.am-pm {
-  font-size: 18px;
-}
+
 .current-date {
   font-size: 16px;
   line-height: 1px;
 }
 .current-location {
   font-size: 30px;
-  padding-bottom: 0;
+  font-weight: bolder;
   margin-bottom: 0;
   padding-right: 10px;
 }
@@ -57,43 +63,66 @@ h1,
   line-height: 1px;
 }
 .temp-illustration {
-  font-size: 80px;
+  width: 150px;
+  line-height: 100px;
+  padding-left: 215px;
+  margin-bottom: 10px;
 }
-.temp-illustration,
+
 .temp-now,
 .temp-units {
-  line-height: 200px;
+  line-height: 150px;
 }
 #weather-description {
-  font-size: 15px;
-  line-height: 50px;
+  font-size: 14px;
+  line-height: 15px;
+  font-weight: 400;
   text-transform: capitalize;
+  color: rgb(248, 239, 112);
+  font-style: italic;
 }
 .temp-now {
-  padding: 80px 2px 80px 2px;
+  padding: 80px 2px 20px 120px;
+  margin-bottom: 10px;
 }
 .temp-units {
-  color: blue;
-  font-size: 15px;
-  padding-right: 0px;
+  font-size: 13px;
+  padding-right: 5px;
   position: relative;
   top: -20px;
+  color: rgb(10, 10, 10);
+}
+#fahrenheit-link,
+#celsius-link,
+.temp-units .active,
+.temp-units .active:hover,
+.github-link {
   text-decoration: none;
+  cursor: default;
 }
 .temp-units .active {
   color: black;
-  text-decoration: none;
 }
 .temp-units .active:hover {
   color: yellow;
-  cursor: default;
-  text-decoration: none;
 }
-
+ul {
+  margin-top: 5px;
+}
+li {
+  list-style-type: none;
+  color: rgb(248, 239, 112);
+  font-size: 13px;
+  font-weight: bolder;
+}
 .weekly-temp {
-  background: rgba(4, 100, 112, 0.856);
   padding: 20px;
   text-align: center;
+}
+#forecast {
+  background: rgba(8, 8, 8, 0.1);
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 .weather-forcast-day {
   opacity: 0.7;
@@ -104,4 +133,11 @@ h1,
 }
 .weather-forcast-temperature-min {
   opacity: 0.5;
+}
+.credits {
+  padding: 0px 350px;
+  position: relative;
+  line-height: 2px;
+  font-family: monospace;
+  font-size: small;
 }

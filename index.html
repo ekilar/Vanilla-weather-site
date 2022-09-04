@@ -16,21 +16,24 @@
   </head>
   <body>
     <div class="container">
-      <div class="action">
-        <form action="search" class="search-form">
-          <input
-            type="text"
-            placeholder="Enter location here"
-            id="search-input"
-          />
-          <input class="search-button" type="submit" value="search" />
-        </form>
-        <br />
+      <div class="row action">
+        <div class="col-8">
+          <form action="search" class="search-form">
+            <input
+              type="text"
+              placeholder="Enter location here"
+              id="search-input"
+            />
+            <input class="search-button" type="submit" value="search" />
+          </form>
+          <br />
+        </div>
       </div>
       <div class="row">
         <div class="col-10">
           <h1>9:14</h1>
           <h2><div class="current-date">Monday, 22 February 2022</div></h2>
+          <div id="weather-description"><small> cloudy</small></div>
         </div>
         <div class="col-2">
           <div class="current-location">Cameroon</div>
@@ -38,12 +41,10 @@
         </div>
       </div>
       <div class="row current-temp">
-        <div class="col-2 temp-illustration" width="150px">
-          <img src="" id="current-icon" alt="weather-icon" />
-
-          <div id="weather-description"><small> cloudy</small></div>
+        <div class="col-6 temp-illustration">
+          <img src="" id="current-icon" alt="weather-icon" width="150px" />
         </div>
-        <div class="col-3">
+        <div class="col-6">
           <span class="temp-now">20</span>
           <span class="temp-units">
             <a href="ff" id="celsius-link" class="active">°C</a> |
@@ -58,8 +59,11 @@
 
       <div class="weekly-temp" id="forecast"></div>
     </div>
-    <div>
-      <a href="https://github.com/ekilar/Vanilla-weather-site"
+    <div class="credits">
+      <a
+        href="https://github.com/ekilar/Vanilla-weather-site"
+        target="_blank"
+        class="github-link"
         >Open-source code</a
       >
       by Kilar
